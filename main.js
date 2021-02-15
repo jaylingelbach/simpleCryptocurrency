@@ -108,18 +108,18 @@ class BlockChain {
     }
 }
 
-let digitalDong = new BlockChain();
+let kittycoins = new BlockChain();
 
 // IRL addresses are public keys of someones wallet
-digitalDong.createTransaction(new Transaction('addy1', 'addy2', 100));
-digitalDong.createTransaction(new Transaction('addy2', 'addy1', 50));
+kittycoins.createTransaction(new Transaction('addy1', 'addy2', 100));
+kittycoins.createTransaction(new Transaction('addy2', 'addy1', 50));
 
 // after this will be pending so have to start the miner to create a block and
 // store it in the chain.
 
 console.log('\n Starting mining operations...');
-digitalDong.minePendingTransactions('fake-address');
+kittycoins.minePendingTransactions('fake-address');
 
 console.log('\n Starting mining operations again...');
-digitalDong.minePendingTransactions('fake-address');
-console.log('`\n Balance of fake-address is: ', digitalDong.getBalanceOfAddress('fake-address'));
+kittycoins.minePendingTransactions('fake-address');
+console.log('`\n Balance of fake-address is: ', kittycoins.getBalanceOfAddress('fake-address'));
